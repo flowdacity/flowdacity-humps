@@ -2,12 +2,12 @@ name: CI testing
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
       - '**/README.md'
       - 'docs/**'
   push:
-    branches: [master]
+    branches: [main]
     paths-ignore:
       - '**/README.md'
       - 'docs/**'
@@ -20,7 +20,7 @@ jobs:
 
     strategy:
       matrix:
-        python: [3.7, 3.8, 3.9, "3.10", "3.11"]
+        python: ["3.11", "3.12"]
 
     steps:
       - name: Checkout repo
